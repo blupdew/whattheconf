@@ -1,12 +1,13 @@
-var gulp = require('gulp');
 
+// Gulp et ses dépendances
+var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 
 gulp.task('default', ['scripts'], function() {
-  // place code here
+  // Rien d'autre pour le moment
 });
 
 gulp.task('scripts', function(){

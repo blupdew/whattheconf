@@ -1,6 +1,6 @@
 {
-  "name": "confgen",
-  "version": "0.0.1",
+  "name": "whattheconf",
+  "version": "0.0.2",
   "description": "Générateur de titres de conférences",
   "main": "confgen.js",
   "scripts": {
