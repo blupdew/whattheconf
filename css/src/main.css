@@ -34,7 +34,7 @@ h2 {
 }
 
 a {
-    color: #0083e8; 
+    color: #0083e8;
 }
 
 b, strong {
@@ -77,6 +77,10 @@ img {
 .note {
     color:#ccc;
     text-align: center;
+}
+
+.note a {
+    color:#ccc;
 }
 
 #refresh {
