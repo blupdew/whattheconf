@@ -25,8 +25,8 @@ pluriels = ["es smileys","es serveurs","es réseaux","es QR code","es émoticons
 plateformes = ["Twitter","la digitalization","Facebook","ERP","KPI","CRM","le cloud","SSL","Windows 10"];
 
 // Bouts aléatoires pour l'auteur
-prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien","Chuck","Jackie","Kévin","Ophélie","Nabila","Luke","ObiWan"];
-noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger","Norris","Van Damme","Jobs","Gates","Glazman","Skyblogger","Kenobi"];
+prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien","Chuck","Jackie","Kévin","Ophélie","Nabilla","Luke","ObiWan"];
+noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger","Norris","Van Damme","Jobs","Gates","Skyblogger","Kenobi"];
 biz1 = ["OneTo","Wee","Trans","Net","Link","You","Ultra","Studio","Alsa"];
 biz2 = ["oo","biz","media","buzz","seo","meta","win","creations"];
 
