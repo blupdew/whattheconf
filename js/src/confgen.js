@@ -31,11 +31,16 @@ var el_result = document.getElementById('result');
 var el_refresh = document.getElementById('refresh');
 
 // Fonction de piochage aléatoire
+
+Array.prototype.randsplice = function() {
+  var ri = Math.floor(Math.random() * this.length);
+  var rs = this.splice(ri, 1);
+  return rs;
+};
+
 function gen(tab) {
     var r = Math.round(Math.random()*(tab.length-1));
-    var result = tab.splice(r,1);
-    //delete tab[r];
-    return result;
+    return tab.randsplice();
 }
 
 // Fonction de génération aléatoire du titre

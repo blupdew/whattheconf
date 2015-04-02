@@ -6,6 +6,14 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
+var watch = require('gulp-watch');
+
+// Watch Files For Changes
+gulp.task('watch', function() {
+  // Styles less
+  gulp.watch(['css/src/*.css'], ['styles']);
+  gulp.watch(['js/src/*.js'], ['scripts']);
+});
 
 gulp.task('default', ['scripts', 'styles'], function() {
   // Rien d'autre pour le moment
