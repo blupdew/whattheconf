@@ -3,6 +3,9 @@ html {
     background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
     background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
     -webkit-font-smoothing: antialiased;
+    background: #ffffff url(bg2.jpg) no-repeat center center;
+    background-size:cover;
+    height:100%;
 }
 
 body {
@@ -13,7 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.5em;
     color: #545454;
-    background-color: #ffffff;
+    background: rgba(255,255,255,0.95);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -25,12 +28,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    color:#369;
+    color:#444;
 }
 
 h2 {
     margin-top: 1.3em;
-    color:rgb(234, 59, 132);
+    color:#dd291a;
 }
 
 a {
@@ -85,7 +88,7 @@ img {
 
 #refresh {
     margin:auto;
-    background:rgb(234, 59, 132);
+    background:#dd291a;
     color:#fff;
     padding:1em;
     font-size:1.3em;
@@ -105,4 +108,3 @@ img {
     font-size:0.8em;
     color:#882;
 }
-

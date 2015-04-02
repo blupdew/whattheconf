@@ -5,6 +5,7 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
+var minify = require('gulp-minify-css');
 
 gulp.task('default', ['scripts', 'styles'], function() {
   // Rien d'autre pour le moment
@@ -13,6 +14,7 @@ gulp.task('default', ['scripts', 'styles'], function() {
 gulp.task('styles', function() {
   return gulp.src('css/src/*.css')
   .pipe(concat('all.css'))
+  .pipe(minify())
   .pipe(rename('all.min.css'))
   //.pipe(uglify())
   .pipe(gulp.dest('css/'));
