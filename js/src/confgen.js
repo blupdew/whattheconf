@@ -1,30 +1,38 @@
 
+var intros, domaines, technos, jobs, concepts, concepts_article, substantifs, adjectifs, problemes, environnements, verbes, actions, pluriels,plateformes, prenoms, noms, biz1, biz2;
+
+function reinit() {
+
 // Bouts variables pour le titre
-var intros = ["10 trucs pour","10 secrets de","10 tendances de","tout ce que vous voulez savoir sur","aux frontières de"];
+intros = ["10 trucs pour","10 secrets de","10 tendances de","tout ce que vous voulez savoir sur","aux frontières de"];
 
-var domaines = ["de la R&amp;D","du serious gaming","du digital","du social media","du branding"];
-var technos = ["HTML5",".Net","AngularJS","Big Data","NodeJS","WebSocket","Grunt","Creative Cloud","Git","Capistrano"];
-var jobs = ["designer", "community manager","lead developer","startupeur"];
+domaines = ["de la R&amp;D","du serious gaming","du digital","du social media","du branding"];
+technos = ["HTML5",".Net","AngularJS","Big Data","NodeJS","WebSocket","Grunt","Creative Cloud","Git","Capistrano"];
+jobs = ["designer", "community manager","lead developer","startupeur"];
 
-var concepts = ["jeu","application","mashup","business model","pull request","networking"];
-var concepts_article = ["un jeu","une application","un mashup","un business model","une pull request","une architecture"];
-var substantifs = ["l'utilisation","le développement","le déploiement","le focus"];
+concepts = ["jeu","application","mashup","business model","pull request","networking"];
+concepts_article = ["un jeu","une application","un mashup","un business model","une pull request","une architecture"];
+substantifs = ["l'utilisation","le développement","le déploiement","le focus"];
 
-var adjectifs = ["disruptif","transmedia","digital","mainstream","BtoB","2.0","web2store","BtoC","retina","créatif","user centric"];
-var problemes = ["les limites","les problèmes","la stratégie","le bounce rate","la logique métier","la parallélisation","le CPC"];
-var environnements = ["en entreprise","en startup","dans le cloud","en agence 360","en mobilité"];
+adjectifs = ["disruptif","transmedia","digital","mainstream","BtoB","2.0","web2store","BtoC","retina","créatif","user centric"];
+problemes = ["les limites","les problèmes","la stratégie","le bounce rate","la logique métier","la parallélisation","le CPC"];
+environnements = ["en entreprise","en startup","dans le cloud","en agence 360","en mobilité"];
 
-var verbes = ["foirer","innover avec","incentiver","benchmarker","customiser","brander","versionner","disrupter","itérer","drafter"];
-var actions = ["comprendre","développer","brander","faire le buzz avec","pusher"];
+verbes = ["foirer","innover avec","incentiver","benchmarker","customiser","brander","versionner","disrupter","itérer","drafter"];
+actions = ["comprendre","développer","brander","faire le buzz avec","pusher"];
 
-var pluriels = ["es smileys","es serveurs","es réseaux","es QR code"];
-var plateformes = ["Twitter","la digitalization","Facebook","ERP","KPI","CRM","le cloud","SSL"];
+pluriels = ["es smileys","es serveurs","es réseaux","es QR code"];
+plateformes = ["Twitter","la digitalization","Facebook","ERP","KPI","CRM","le cloud","SSL"];
 
 // Bouts aléatoires pour l'auteur
-var prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien"];
-var noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger"];
-var biz1 = ["OneTo","Wee","Trans","Net","Link","You"];
-var biz2 = ["oo","biz","media","buzz"];
+prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien"];
+noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger"];
+biz1 = ["OneTo","Wee","Trans","Net","Link","You"];
+biz2 = ["oo","biz","media","buzz"];
+
+}
+
+reinit();
 
 // Eléments HTML concernés
 var el_result = document.getElementById('result');
@@ -96,6 +104,7 @@ function gen_by() {
 function refresh() {
   var resultat = gen_conf()+'<br><span class="by">'+gen_by()+'</span>';
   el_result.innerHTML = resultat;
+  reinit();
 }
 el_refresh.addEventListener('click', refresh, false);
 
