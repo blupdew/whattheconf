@@ -1,5 +1,5 @@
 
-var intros, domaines, technos, jobs, concepts, concepts_article, substantifs, adjectifs, problemes, environnements, verbes, actions, pluriels,plateformes, prenoms, noms, biz1, biz2;
+var intros, domaines, technos, jobs, concepts, concepts_article, substantifs, adjectifs, problemes, environnements, verbes, actions, pluriels,plateformes, prenoms, noms, biz1, biz2, refreshbutton;
 
 function reinit() {
 
@@ -7,28 +7,31 @@ function reinit() {
 intros = ["10 trucs pour","10 secrets de","10 tendances de","tout ce que vous voulez savoir sur","aux frontières de"];
 
 domaines = ["de la R&amp;D","du serious gaming","du digital","du social media","du branding"];
-technos = ["HTML5",".Net","AngularJS","Big Data","NodeJS","WebSocket","Grunt","Creative Cloud","Git","Capistrano"];
-jobs = ["designer", "community manager","lead developer","startupeur"];
+technos = ["HTML5",".Net","AngularJS","Big Data","NodeJS","WebSocket","Grunt","Creative Cloud","Git","Capistrano","Yeoman"];
+jobs = ["designer", "community manager","lead developer","startupeur","Growth Hacker","Développeur Cobol","webdesigner"];
 
 concepts = ["jeu","application","mashup","business model","pull request","networking"];
 concepts_article = ["un jeu","une application","un mashup","un business model","une pull request","une architecture"];
 substantifs = ["l'utilisation","le développement","le déploiement","le focus"];
 
-adjectifs = ["disruptif","transmedia","digital","mainstream","BtoB","2.0","web2store","BtoC","retina","créatif","user centric"];
+adjectifs = ["disruptif","transmedia","digital","mainstream","BtoB","2.0","web2store","BtoC","retina","créatif","user centric","proactif","win-win"];
 problemes = ["les limites","les problèmes","la stratégie","le bounce rate","la logique métier","la parallélisation","le CPC"];
-environnements = ["en entreprise","en startup","dans le cloud","en agence 360","en mobilité"];
+environnements = ["en entreprise","en startup","dans le cloud","en agence 360","en mobilité","en agence plurimédia","en freelance","en binôme","en hackaton"];
 
 verbes = ["foirer","innover avec","incentiver","benchmarker","customiser","brander","versionner","disrupter","itérer","drafter"];
-actions = ["comprendre","développer","brander","faire le buzz avec","pusher"];
+actions = ["comprendre","développer","brander","faire le buzz avec","pusher","commiter"];
 
-pluriels = ["es smileys","es serveurs","es réseaux","es QR code"];
-plateformes = ["Twitter","la digitalization","Facebook","ERP","KPI","CRM","le cloud","SSL"];
+pluriels = ["es smileys","es serveurs","es réseaux","es QR code","es émoticons","es Gifs animés"];
+plateformes = ["Twitter","la digitalization","Facebook","ERP","KPI","CRM","le cloud","SSL","Windows 10"];
 
 // Bouts aléatoires pour l'auteur
-prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien"];
-noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger"];
-biz1 = ["OneTo","Wee","Trans","Net","Link","You"];
-biz2 = ["oo","biz","media","buzz"];
+prenoms = ["Tristan","Jake","Bruce","Christophe","Bobby","Raphël","Stéphanie","Goulven","Jeanne","Damien","Chuck","Jackie","Kévin","Ophélie","Nabila","Luke","ObiWan"];
+noms = ["Lawson","Tyler","Goetter","Dorne","Parisot","de Oliveira","Chouquet","Zuckerberger","Norris","Van Damme","Jobs","Gates","Glazman","Skyblogger","Kenobi"];
+biz1 = ["OneTo","Wee","Trans","Net","Link","You","Ultra","Studio","Alsa"];
+biz2 = ["oo","biz","media","buzz","seo","meta","win","creations"];
+
+//Boutons funs
+refreshbutton= ["C'est naze","Juste...non","One more thing","Autre chose?","On peut faire mieux","Refresh","F5","Ma grand-mère fait mieux","Je like à moitié"];
 
 }
 
@@ -37,6 +40,8 @@ reinit();
 // Eléments HTML concernés
 var el_result = document.getElementById('result');
 var el_refresh = document.getElementById('refresh');
+var el_thetwitt = document.getElementById('thetwitt');
+
 
 // Fonction de piochage aléatoire
 
@@ -102,8 +107,13 @@ function gen_by() {
 
 // Rafraîchit le contenu HTML
 function refresh() {
-  var resultat = gen_conf()+'<br><span class="by">'+gen_by()+'</span>';
+  var conf = gen_conf();
+  var by = gen_by();
+  var resultat = conf+'<br><span class="by">'+by+'</span>';
+  var thetwitt = '<a id="thetwitt" href="https://twitter.com/intent/tweet?source=webclient&original_referer=http://whattheconf.pwnd.fr&text='+conf+' '+by+' via &url=http://whattheconf.pwnd.fr">Twitter ça !</a>';
   el_result.innerHTML = resultat;
+  el_thetwitt.innerHTML= thetwitt;
+  el_refresh.value= gen(refreshbutton);
   reinit();
 }
 el_refresh.addEventListener('click', refresh, false);
