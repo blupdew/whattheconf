@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    background-color:white;
     margin: 3em auto;
     padding: 2em 2em 4em;
     max-width: 800px;
@@ -34,7 +35,7 @@ h1 {
 
 h2 {
     margin-top: 1.3em;
-    color:#fff;
+    color:#DD291A;
     font-weight:normal;
 }
 
@@ -105,7 +106,7 @@ img {
 
 #result {
     text-align: center;
-    background:#F0FF00;
+    background:#fff59d;
     padding:1em;
     font-size:1.5em;
 }
