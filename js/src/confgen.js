@@ -11,7 +11,7 @@ var concepts_article = ["un jeu","une application","un mashup","un business mode
 var substantifs = ["l'utilisation","le développement","le déploiement","le focus"];
 
 var adjectifs = ["disruptif","transmedia","digital","mainstream","BtoB","2.0","web2store","BtoC","retina","créatif","user centric"];
-var problemes = ["les limites","les problèmes","la stratégie","le bounce rate","la logique métier","la parallélisation"];
+var problemes = ["les limites","les problèmes","la stratégie","le bounce rate","la logique métier","la parallélisation","le CPC"];
 var environnements = ["en entreprise","en startup","dans le cloud","en agence 360","en mobilité"];
 
 var verbes = ["foirer","innover avec","incentiver","benchmarker","customiser","brander","versionner","disrupter","itérer","drafter"];
@@ -33,8 +33,8 @@ var el_refresh = document.getElementById('refresh');
 // Fonction de piochage aléatoire
 function gen(tab) {
     var r = Math.round(Math.random()*(tab.length-1));
-    var result = tab[r];
-    delete tab[r];
+    var result = tab.splice(r,1);
+    //delete tab[r];
     return result;
 }
 

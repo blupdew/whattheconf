@@ -22,8 +22,8 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function(){
   return gulp.src('js/src/*.js') // read all of the files that are in script/lib with a .js extension
-  .pipe(jshint()) // run their contents through jshint
-  .pipe(jshint.reporter('default')) // report any findings from jshint
+  // .pipe(jshint()) // run their contents through jshint
+  //.pipe(jshint.reporter('default')) // report any findings from jshint
   .pipe(concat('all.js')) // concatenate all of the file contents into a file titled 'all.js'
   //.pipe(gulp.dest('dist/js')) // write that file to the dist/js directory
   .pipe(rename('all.min.js')) // now rename the file in memory to 'all.min.js'
