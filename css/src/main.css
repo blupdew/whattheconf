@@ -16,7 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.5em;
     color: #545454;
-    background: rgba(255,255,255,0.95);
+    /*background: rgba(255,255,255,0.95);*/
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -28,12 +28,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    color:#444;
+    color:#eee;
+    text-shadow:1px 2px 0 #444;
 }
 
 h2 {
     margin-top: 1.3em;
-    color:#dd291a;
+    color:#fff;
+    font-weight:normal;
 }
 
 a {
@@ -97,11 +99,24 @@ img {
     cursor:pointer;
 }
 
+#refresh:hover {
+  background-color:#E44331;
+}
+
 #result {
     text-align: center;
-    background:rgb(245, 233, 149);
+    background:#F0FF00;
     padding:1em;
     font-size:1.5em;
+}
+
+#thetwitt{
+  margin:1em auto;
+  color:#00ACED;
+  font-size:1em;
+  border:0;
+  display:table;
+  cursor:pointer;
 }
 
 .by {
