@@ -1,6 +1,6 @@
 # WhatTheconF
 
-Générateur de noms de conférences WTF.
+Générateur de noms de conférences WTF  http://whattheconf.pwnd.fr/
 
 ## Usage
 
